@@ -24,3 +24,8 @@ jobs:
 
       - name: Push Docker Image
         run: docker push manojdevsec/cicd:latest
+
+      - name: Deploy to Kubernetes
+        run: |
+          echo "Deploying to Kubernetes..."
+          kubectl apply -f k8s/
